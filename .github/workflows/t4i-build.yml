@@ -24,6 +24,12 @@ jobs:
           unzip -t platform/650D.104/build/magiclantern.zip
           unzip -Z1 platform/650D.104/build/magiclantern.zip | grep -i '^autoexec.bin$'
           unzip -Z1 platform/650D.104/build/magiclantern.zip | grep -i '^ML/modules/sd_clock.mo$'
+          unzip -Z1 platform/650D.104/build/magiclantern.zip | grep -i '^ML/modules/burst.mo
+        with:
+          name: MagicLantern-650D104-baseline
+          path: platform/650D.104/build/magiclantern.zip
+          if-no-files-found: error
+
       - uses: actions/upload-artifact@v4
         with:
           name: MagicLantern-650D104-baseline
