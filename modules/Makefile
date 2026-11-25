@@ -48,6 +48,7 @@ ML_MODULES = \
     img_name \
     lua \
     bench \
+    burst \
     selftest \
     adv_int \
     crop_rec \
